@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer</title>
+</head>
+
+<body>
+  <center>
+    <h1>Sublime Data Systems</h1>
+<hr><br>
+  <h2>Edit customer</h2>
+  <div>
+    <a href="./edit.html" style="text-decoration: none; background-color:black; border: 2px solid gray;color: white;border-radius: 3px;">Edit</a>
+  </div>
+  <br><hr><br>
+  <h2>Add customer</h2>
+  <form action="/add" method="POST" id="productForm">
+    <div class="control-group">
+      <input type="text" name="id" class="form-control" id="id" placeholder="Id" required />
+    </div>
+    <br>
+    <div class="control-group">
+      <input type="text" name="first_name" class="form-control" id="first_name" placeholder="First Name" required />
+    </div>
+    <br>
+    <div class="control-group">
+      <input type="text" name="last_name" class="form-control" id="last_name" placeholder="Last Name"
+        required />
+    </div>
+    <br>
+    <div class="control-group">
+      <input type="text" name="city" class="form-control" id="city" value="Ahmedabad" placeholder="City" readonly
+        required />
+    </div>
+    <br>
+    <div class="control-group">
+      <input type="text" name="company" class="form-control" id="company" value="SublimeDataSystems" placeholder="Company" readonly
+        required />
+    </div>
+    <br>
+    <br>
+    <div>
+      <button class="btn" type="submit" value="Customer" id="sendMessageButton">Add Customer</button>
+    </div>
+  </form>
+  <br><hr><br>
+  <h2>delete customer by id</h2>
+  <form action="/delete" method="POST">
+    <div class="control-group">
+      <input type="text" name="id" class="form-control" id="id" placeholder="your id" required>
+    </div>
+    <br>
+    <div>
+      <button class="btn" type="submit" value="Delete" id="sendMessageButton">Delete Customer</button>
+    </div>
+  </form>
+  <br><hr><br>
+  <h2>find customer by id</h2>
+  <form action="/find" method="GET">
+    <div class="control-group">
+      <input type="text" name="id" class="form-control" id="id" placeholder="your id" required>
+    </div>
+    <br>
+    <button type="submit" value="Find">Find Customer</button>
+  </form>
+  <br><hr><br>
+<h2>Find customer by first_name, last_name and City</h2>
+  <form action="/findby" method="GET">
+    <div class="control-group">
+      <input type="text" name="first_name" class="form-control" id="first_name" placeholder="First Name" required>
+    </div>
+    <br>
+    <div class="control-group">
+      <input type="text" name="last_name" class="form-control" id="last_name" placeholder="Last Name" required>
+    </div>
+    <br>
+    <div class="control-group">
+      <input type="text" name="city" class="form-control" id="city" placeholder="City Name" required>
+    </div>
+    <br>
+    <button type="submit" value="Findby">Find Customer</button>
+  </form>
+</center>
+</body>
+</html>
